@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+        @font-face {
+            font-family: Riviera Nights Medium;
+            src: url(./RivieraNights-Medium.ttf);
+        }
+
+        @font-face {
+            font-family: Riviera Nights Light;
+            src: url(./RivieraNights-Light.ttf);
+        }
+
+        * {
+            font-family: Riviera Nights Light, sans-serif;
+        }
+
+        body,
+        .main {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .buyDiv {
+            width: 90%;
+            height: 600px;
+            margin-top: 40px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .divForm {
+            max-width: 500px;
+            width: 100%;
+            height: fit-content;
+            background-color: #fff;
+            backdrop-filter: blur(5px);
+            margin: 5%;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgb(173, 173, 173);
+        }
+
+        label {
+            float: left;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        label:hover {
+            color: rgb(126, 0, 0);
+        }
+
+        input {
+            float: right;
+            border: none;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            border-bottom: 2px solid rgb(0, 0, 0);
+        }
+
+        input:hover {
+            border-bottom: 2px solid rgb(108, 0, 0);
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .Gen {
+            float: left;
+            margin-left: 260px;
+            font-size: 24px;
+            font-weight: 300;
+            width: 310px;
+            height: fit-content;
+            margin-top: -15px;
+        }
+
+        .Gen input {
+            float: left;
+        }
+
+        .button1 {
+            height: 50px;
+            width: 150px;
+            background: linear-gradient(to bottom, #f0d4af, #e6bd88);
+            color: rgb(49, 49, 49);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 900;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .button1:hover {
+            box-shadow: 0px 0px 10px wheat;
+            background: linear-gradient(to bottom, #e6bd88, #f0d4af);
+        }
+
+        .booked_car {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            background-color: #f0f0f0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 15px;
+            z-index: 9999;
+            box-shadow: 0px 0px 10px rgb(175, 175, 175);
+        }
+
+        .fa-circle-check {
+            color: green;
+            font-size: 100px;
+            position: absolute;
+            top: -40px;
+            left: 100px;
+            background-color: white;
+            border-radius: 49%;
+        }
+
+        .SuccessFully_div {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .button2 {
+            height: 50px;
+            width: 150px;
+            color: white;
+            background-color: green;
+            border: 2px solid white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            color: rgb(28, 28, 28);
+        }
+
+        .line {
+            width: 140px;
+            height: 4px;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to bottom, #f0d4af, #e6bd88);
+            margin-top: -20px;
+            margin-left: 60px;
+        }
+    </style>
+
+    <title>Buy A Car</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="heading">Book Your Car</h1>
+        <div class="line"></div>
+        <div class="buyDiv">
+            <div class="divForm">
+                <form id="carForm">
+                    <label>First Name: </label>
+                    <input type="text" name="firstName" /><br /><br /><br />
+
+                    <label>Second Name: </label>
+                    <input type="text" name="secondName" /><br /><br /><br />
+
+                    <label>Phone Number: </label>
+                    <input type="number" name="phoneNumber" /><br /><br /><br />
+
+                    <label>House No:</label><input type="text" name="houseNo" /><br /><br /><br />
+                    <label>City:</label><input type="text" name="city" /><br /><br /><br />
+                    <label>State:</label><input type="text" name="state" /><br /><br /><br />
+                    <label>Country:</label><input type="text" name="country" /><br /><br /><br />
+
+                    <label>Payment Method:</label><br />
+                    <div class="Gen">
+                        <span>Cash</span><input type="radio" name="paymentMethod" value="Cash" /><br />
+                        <span>Cheque</span><input type="radio" name="paymentMethod" value="Cheque" />
+                    </div>
+                    <br /><br /><br /><br />
+                    <div class="button1" onclick="onBuy()"><b>Submit</b></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="booked_car">
+        <div><i class="fa-solid fa-circle-check"></i></div>
+        <div>CAR BOOKED</div>
+        <div class="SuccessFully_div">SUCCESSFULLY</div>
+        <div class="button2" onclick="doneBooking()">Done</div>
+    </div>
+
+    <script>
+        function onBuy() {
+            var firstName = document.querySelector('input[name="firstName"]').value.trim();
+            var secondName = document.querySelector('input[name="secondName"]').value.trim();
+            var phoneNumber = document.querySelector('input[name="phoneNumber"]').value.trim();
+            var houseNo = document.querySelector('input[name="houseNo"]').value.trim();
+            var city = document.querySelector('input[name="city"]').value.trim();
+            var state = document.querySelector('input[name="state"]').value.trim();
+            var country = document.querySelector('input[name="country"]').value.trim();
+            var paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+
+            var errorMessage = "";
+
+            if (!firstName) errorMessage += "First Name is required.\n";
+            if (!secondName) errorMessage += "Second Name is required.\n";
+            if (!phoneNumber) errorMessage += "Phone Number is required.\n";
+            if (!houseNo) errorMessage += "House No is required.\n";
+            if (!city) errorMessage += "City is required.\n";
+            if (!state) errorMessage += "State is required.\n";
+            if (!country) errorMessage += "Country is required.\n";
+            if (!paymentMethod) errorMessage += "Please select a Payment Method.\n";
+
+            if (errorMessage) {
+                alert(errorMessage);
+                return;
+            }
+
+            var carData = {
+                firstName,
+                secondName,
+                phoneNumber,
+                houseNo,
+                city,
+                state,
+                country,
+                paymentMethod: paymentMethod.value
+            };
+
+            var bookings = JSON.parse(localStorage.getItem('carBookings')) || [];
+            bookings.push(carData);
+            localStorage.setItem('carBookings', JSON.stringify(bookings));
+
+            document.querySelector(".booked_car").style.display = "flex";
+        }
+
+        function doneBooking() {
+            // document.querySelector(".booked_car").style.display = "none";
+            alert("Delivery in 2 days..");
+            window.location.href = "cars.html";
+            document.getElementById("carForm").reset();
+        }
+
+    </script>
+</body>
+
+</html>
